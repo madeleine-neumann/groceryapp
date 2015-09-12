@@ -1,5 +1,5 @@
 <form action="/grocery/update/<%= grocery.id %>" method="POST" class="form-signin">
-	<h2>Updating grocery<br><%= grocery.name %> [<%= grocery.id %>]</h2>
+	<h2>Updating grocery<br><%= grocery.item %> [<%= grocery.id %>]</h2>
 
 	<input type="text" class="form-control" name="Item" placeholder="What would you like to buy?" value="<%= grocery.item %>">
 	<input type="text" class="form-control" name="Link to Item" placeholder="Do you have a link? (with http://)?" value="<%= grocery.linkToItem %>">
