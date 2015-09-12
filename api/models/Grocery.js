@@ -6,20 +6,18 @@
 */
 
 module.exports = {
-
   attributes: {
     item: {
       type: 'string',
-      require: true
+      required: true
     },
     linkToItem: {
       type: 'string',
-      require: false
     },
     nameOfNeeder: {
       type: 'string',
-      require: false
-    }
+      required: true
+    },
 
   }
 };

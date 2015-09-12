@@ -1,10 +1,21 @@
 <div class="container">
-	<form action="/grocery/create" method="post">
-		<h2>Create a new Grocery</h2>
-		<p><input type="text" class="form-control" placeholder="Your Item" name="item">
-		<input type="text" class="form-control" placeholder="URL to Item" name="URL">
-		<input type="text" class="form-control" placeholder="Your Name" name="name"> </p>
-		<input type="submit" class="btn btn-lg btn-primary btn-block">
-		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+	<form action="/grocery/create" method="POST" class="form-signin">
+		<h2 class="formm-signin-heading">Create an item</h2>
+
+		<% if (flash && flash.err) { %>
+		<ul class="alert alert-success">
+			<% Object.keys(flash.err).forEach(function (error) { %>
+			<li><%- JSON.stringify( flash.err[error]) %></li>
+			<% }); %>
+		</ul>
+		<% } %>
+
+		<input type="text" class="form-control" placeholder="Item" name="item">
+		<input type="text" class="form-control" placeholder="Link to Item" name="linkToItem">
+		<input type="text" class="form-control" placeholder="Your Name" name="nameOfNeeder">
+		<br>
+
+		<input type="submit" class="btn btn-lg btn-primary btn-block" value="Create Item">
+		<input type="hidden" name="_csrf" value="<%= _csrf %>">
 	</form>
 </div>

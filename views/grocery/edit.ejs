@@ -1,0 +1,14 @@
+<div class="container">
+	<form action="/grocery/update/<%= grocery.id %>" method="POST" class="form-signin">
+		<h2>Updating Item<br></h2>
+		<p>Grocery: <%= grocery.item %></p>
+
+		<p><input type="text" class="form-control" item="item" placeholder="What would you like to buy?" value="<%= grocery.item %>"></p>
+		<p><input type="text" class="form-control" item="linkToItem" placeholder="Do you have a link?" value="<%= grocery.linkToItem %>"></p>
+		<p><input type="text" class="form-control" item="nameOfNeeder" placeholder="What's your name?" value="<%= grocery.nameOfNeeder %>"></p>
+		<br>
+
+		<input type="submit" class="btn btn-lg btn-primary btn-block" value="Proceed">
+		<input type="hidden" item="_csrf" value="<%= _csrf %>">
+	</form>
+</div>
