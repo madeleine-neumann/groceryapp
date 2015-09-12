@@ -20,21 +20,20 @@ h2 {
     padding-top: 20px;
 }
 
-.form-signin {
+.form-new-item {
     max-width: 30%;
     padding: 19px 29px 29px;
     margin: 20px auto;
-    background-color: @lightGray;
-    border: 1px solid @green;
     border-radius: 15px;
+}
 
 h2 {
     text-align: center;
     margin-top: 0px;
 }
-}
-.form-signin input[type="text"],
-.form-signin input[type="password"] {
+
+.form-new-item input[type="text"],
+.form-new-item input[type="password"] {
     font-size: 1em;
     height: auto;
     margin-bottom: 15px;
