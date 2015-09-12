@@ -1,3 +1,3 @@
-# groceries-sails
+# Grocery App made with Sails
 
-a [Sails](http://sailsjs.org) application
+Start Sails server with: sails lift
