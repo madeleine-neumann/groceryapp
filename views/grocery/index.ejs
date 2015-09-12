@@ -1,5 +1,5 @@
 <div class="container">
-	<h3>Users</h3>
+	<h3>Grocerys</h3>
 
 	<table class="table">
 		<tr>
@@ -14,7 +14,7 @@
 		<% _.each(grocerys, function (grocery) { %>
 		<tr data-id="<%= grocery.id %>" data-model="grocery">
 			<td><%= grocery.item %></td>
-			<td><%= grocery.linkToItem %></td>
+			<td><a href="<%= grocery.linkToItem %>"><%= grocery.linkToItem %></a></td>
 			<td><%= grocery.nameOfNeeder %></td>
 			<td><a href="/grocery/show/<%= grocery.id %>" class="btn btn-sm btn-primary">Show</a></td>
 			<td><a href="/grocery/edit/<%= grocery.id %>" class="btn btn-sm btn-warning">Edit</a></td>
@@ -23,4 +23,5 @@
 
 		<%	}) %>
 	</table>
+	<td><a href="/grocery/new/" class="btn btn-sm btn-primary">Create new Item</a></td>
 </div>

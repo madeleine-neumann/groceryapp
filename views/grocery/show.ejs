@@ -1,6 +1,20 @@
 <div class="container">
-	<p>What to buy: <%= grocery.item %></p>
-	<p>Link to Item: <%= grocery.linkToItem %></p>
-	<p>Who need it?: <%- grocery.nameOfNeeder %></p>
+	<h2>You successfully created the item: <%= grocery.item %></h2>
+
+	<table class="table">
+		<tr>
+			<th>What to buy:</th>
+			<th>Link to Item:</th>
+			<th>Who need it?:</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+			<td><%= grocery.item %></td>
+			<td><%= grocery.linkToItem %></a></td>
+			<td><%= grocery.nameOfNeeder %></td>
+		</tr>
+	</table>
 	<a class="btn btn-medium btn-primary" href="/grocery/edit/<%= grocery.id %>">edit item</a>
+	<a class="btn btn-medium btn-success" href="/grocery/index/"> Go back to List</a>
 </div>
