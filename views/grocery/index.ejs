@@ -14,7 +14,7 @@
 		<% _.each(grocerys, function (grocery) { %>
 		<tr data-id="<%= grocery.id %>" data-model="grocery">
 			<td><%= grocery.item %></td>
-			<td><a href="<%= grocery.linkToItem %>"><%= grocery.linkToItem %></a></td>
+			<td><a href="<%= grocery.linkToItem %>" target="_blank"><%= grocery.linkToItem %></a></td>
 			<td><%= grocery.nameOfNeeder %></td>
 			<td><a href="/grocery/show/<%= grocery.id %>" class="btn btn-sm btn-primary">Show</a></td>
 			<td><a href="/grocery/edit/<%= grocery.id %>" class="btn btn-sm btn-warning">Edit</a></td>
