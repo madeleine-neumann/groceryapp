@@ -41,16 +41,6 @@ module.exports = {
       });
     });
   },
-  show : function (req, res, next) {
-    Grocery.findOne(req.param('id'), function foundGrocery( err, grocery ) {
-      if (err) return next(err);
-      if (!grocery) return next();
-
-      res.view({
-        grocery : grocery
-      });
-    });
-  },
 
   index : function (req, res, next) {
     // Get an array of all grocerys in the Grocery collection(table)
