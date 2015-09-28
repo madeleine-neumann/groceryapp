@@ -14,7 +14,7 @@ module.exports = {
 
   create : function (req, res, next) {
     // Create a Grocery with the params sent from the sign-up form
-    Grocery.create( req.params.all(), function grocery (err, grocery) {
+    Grocery.create( req.params.all(), function (err, grocery) {
       // if there's an error
       console.log(err)
       if (err) {
@@ -32,7 +32,7 @@ module.exports = {
   },
 
   show : function (req, res, next) {
-    Grocery.findOne(req.param('id'), function foundGrocery( err, grocery ) {
+    Grocery.findOne(req.param('id'), function ( err, grocery ) {
       if (err) return next(err);
       if (!grocery) return next();
 
@@ -44,7 +44,7 @@ module.exports = {
 
   index : function (req, res, next) {
     // Get an array of all grocerys in the Grocery collection(table)
-    Grocery.find( function foundGrocery(err, grocerys) {
+    Grocery.find( function (err, grocerys) {
       if (err) return next(err);
 
       // pass the array down to the /grocery/index.ejs page
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   edit : function (req, res, next) {
-    Grocery.findOne( req.param('id'), function foundGrocery( err, grocery ) {
+    Grocery.findOne( req.param('id'), function ( err, grocery ) {
       if (err) return next(err);
       if (!grocery) return next('Grocery doesn\'t exist');
 
@@ -66,7 +66,7 @@ module.exports = {
   },
 
   update : function (req, res, next) {
-    Grocery.update( req.param('id'), req.params.all(), function usreUpdate( err ) {
+    Grocery.update( req.param('id'), req.params.all(), function ( err ) {
       if (err) {
         return res.redirect('/grocery/edit/' + req.param('id'));
       }
@@ -76,7 +76,7 @@ module.exports = {
   },
 
   destroy : function (req, res, next) {
-    Grocery.findOne( req.param('id'), function foundGrocery (err, grocery) {
+    Grocery.findOne( req.param('id'), function (err, grocery) {
       if (err) return next(err);
       if (!grocery) return next('Grocery doesn\'t exist');
 
